@@ -1,0 +1,27 @@
+203861457  h=11  steps=191  quantum= 55.5%  solved=True
+248307561  h=20  steps= 52  quantum= 78.8%  solved=True
+567034281  h=19  steps=165  quantum= 57.6%  solved=True
+307284651  h=19  steps=181  quantum= 60.8%  solved=True
+380721456  h=12  steps=174  quantum= 65.5%  solved=True
+627158340  h=16  steps=104  quantum= 61.5%  solved=True
+376215840  h=14  steps= 32  quantum= 81.2%  solved=True
+432851706  h= 9  steps= 99  quantum= 50.5%  solved=True
+328764015  h=14  steps= 54  quantum= 74.1%  solved=True
+320814675  h=14  steps= 40  quantum= 72.5%  solved=True
+167308452  h=16  steps=100  quantum= 61.0%  solved=True
+816243570  h=12  steps=128  quantum= 61.7%  solved=True
+852307146  h=16  steps= 92  quantum= 68.5%  solved=True
+783612405  h=13  steps=200  quantum= 61.0%  solved=False
+032167854  h=12  steps= 72  quantum= 63.9%  solved=True
+645318072  h=18  steps= 70  quantum= 74.3%  solved=True
+561423708  h= 9  steps= 15  quantum= 93.3%  solved=True
+278105436  h=14  steps=142  quantum= 61.3%  solved=True
+806275413  h=15  steps=200  quantum= 56.0%  solved=False
+630275841  h=16  steps=100  quantum= 60.0%  solved=True
+
+Solved: 18/20
+Mean h_start: 14.4  (std 3.1)
+Mean steps: 110.5  (std 57.7)
+Mean quantum%: 66.0  (std 10.1)
+
+Wrote C:\Users\andri\Desktop\Paper\hybrid-grover-8puzzle\results\batch.json
