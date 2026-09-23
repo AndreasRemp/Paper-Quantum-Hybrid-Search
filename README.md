@@ -13,27 +13,27 @@ independent of problem size.
 
 ## Method, in short
 
-1. **Classical lookahead** — bounded breadth-first search to depth `L`, with
+1. **Classical lookahead**: bounded breadth-first search to depth `L`, with
    reverse-move pruning and shortest-path deduplication, produces a beam of
    up to `k` candidate paths, each scored by `f = g + h` (Manhattan
    distance heuristic).
-2. **Quantum selection** — a Grover circuit over `ceil(log2(k))` index
+2. **Quantum selection**: a Grover circuit over `ceil(log2(k))` index
    qubits amplifies the candidates sharing the minimum `f`, then a single
    projective measurement picks one.
-3. **Move execution** — if the selected successor state is on a fixed-size
+3. **Move execution**: if the selected successor state is on a fixed-size
    tabu list, a classical fallback picks the best non-tabu candidate
    instead.
 
 ## Repo layout
 
 ```
-codes/       puzzle.py, lookahead.py, quantum_selector.py, solver.py -- the
-             implementation -- plus run_single_instance.py, run_batch.py,
-             run_second_example.py (experiments) and generate_*.py (figure
-             generation).
-results/     JSON/log output from the experiment scripts -- the recorded
+codes/       The implementation (puzzle.py, lookahead.py, quantum_selector.py,
+             solver.py), the experiment scripts (run_single_instance.py,
+             run_batch.py, run_second_example.py), and the figure generators
+             (generate_*.py).
+results/     JSON/log output from the experiment scripts: the recorded
              outcome of every run.
-figures/     the plots generated from results/.
+figures/     The plots generated from results/.
 ```
 
 ## Reproducing the results
@@ -66,4 +66,4 @@ decision itself.
 
 ## License
 
-MIT — see `LICENSE`.
+MIT. See `LICENSE`.

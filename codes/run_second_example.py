@@ -1,14 +1,14 @@
-"""Second worked example for the paper's Section 4.4-4.5, addressing the
-reviewer comment that a single example (14 candidates, |M|=2) does not
-demonstrate the mechanism across different branching/marked-set structures.
+"""Second worked example for the paper's Section 4.4-4.5, demonstrating the
+selection mechanism across a different branching and marked-set structure
+than the first example.
 
 This uses step 21 of the verified single-instance trajectory
-(../results/single_instance.json) -- state "310452786", blank tile at a
-corner position (geometric branching factor 2, vs. the first example's
-edge position, branching factor 3) -- where beam truncation actually
-engages (16 candidates, i.e. the full beam width k=16, vs. 14 in the first
-example) and the marked set is much larger (|M|=5 vs. 2), giving a
-different qubit/iteration regime.
+(../results/single_instance.json): state "310452786", blank tile at a
+corner position (geometric branching factor 2, versus the first example's
+edge position, branching factor 3), where beam truncation actually
+engages (16 candidates, i.e. the full beam width k=16, versus 14 in the
+first example) and the marked set is much larger (|M|=5 versus 2), giving
+a different qubit/iteration regime.
 
 The diagnostic histogram uses the same step-seed convention as the solver's
 own per-step decision (seed_sim*1000 + step), so it reflects the exact

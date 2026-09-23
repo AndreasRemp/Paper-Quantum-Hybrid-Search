@@ -4,7 +4,7 @@ Bounded breadth-first expansion to a fixed depth L, with reverse-move pruning
 (a move that immediately undoes the previous move is never taken) and
 shortest-path deduplication (a state already reached at an equal or shorter
 depth along another branch is not re-queued). Only leaves at exactly depth L
-are scored and returned as candidates -- this matches the paper's Section 4.3
+are scored and returned as candidates. This matches the paper's Section 4.3
 worked example (14 candidates at L=4 from state "425087316").
 """
 

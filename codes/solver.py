@@ -1,24 +1,22 @@
-"""The hybrid Grover lookahead solver -- Algorithm 1 in the paper.
+"""The hybrid Grover lookahead solver: Algorithm 1 in the paper.
 
-Faithful reconstruction from the paper's formal description (Section 3.2 /
-Algorithm 1), not a copy of the exploratory notebook code: the notebook's
-`hybrid_grover_8puzzle` cell has no tabu window (an ever-growing `visited`
-set instead) and never records which of quantum-selection / classical-fallback
-/ forced-move produced each step, which is exactly the statistic Table 2 of
-the paper reports. This module adds both, matching Algorithm 1 line-for-line.
+Implements the paper's formal description (Section 3.2, Algorithm 1) in
+full: the classical lookahead stage, the Grover-based quantum selector, the
+tabu window, and per-step tracking of whether each move came from the
+quantum selector, the classical fallback, or was forced (Table 2's
+statistic).
 
-Decision rule: Algorithm 1's pseudocode reads "Measure index register -> j"
--- a single projective measurement, not "run `shots` repetitions and take the
+Decision rule: Algorithm 1's pseudocode reads "Measure index register -> j",
+a single projective measurement, not "run `shots` repetitions and take the
 most frequent outcome". Taking the mode of a fixed-seed multi-shot circuit
-makes the decision at a given (state, marked-set) configuration deterministic,
-which lets the solver settle into self-reinforcing cycles a finite tabu window
-cannot break (confirmed experimentally: increasing tau from 20 to 80 did not
-resolve stalling on an affected instance). Each step here instead performs a
-single-shot measurement with a step-advancing seed (still fully deterministic
-and reproducible given `seed_sim`, since it derives from `seed_sim` and the
-step counter). The paper's multi-shot histograms (Figures 2 and the second
-worked example) remain multi-shot -- they are diagnostic snapshots of the
-distribution at that step, not the decision itself; see `first_step_payload`.
+makes the decision at a given (state, marked-set) configuration
+deterministic, which lets the solver settle into self-reinforcing cycles
+that a finite tabu window cannot break. Each step here instead performs a
+single-shot measurement with a step-advancing seed (still fully
+deterministic and reproducible given `seed_sim`, since it derives from
+`seed_sim` and the step counter). The paper's multi-shot histograms remain
+multi-shot: they are diagnostic snapshots of the distribution at that step,
+not the decision itself; see `first_step_payload`.
 """
 
 from collections import deque
