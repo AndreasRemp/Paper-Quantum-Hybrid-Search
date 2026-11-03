@@ -1,11 +1,11 @@
-"""Classical lookahead stage (paper Section 3.2, "Classical stage").
+"""Classical lookahead stage (the "classical stage" of the paper's Algorithm 1).
 
 Bounded breadth-first expansion to a fixed depth L, with reverse-move pruning
 (a move that immediately undoes the previous move is never taken) and
 shortest-path deduplication (a state already reached at an equal or shorter
 depth along another branch is not re-queued). Only leaves at exactly depth L
-are scored and returned as candidates. This matches the paper's Section 4.3
-worked example (14 candidates at L=4 from state "425087316").
+are scored and returned as candidates (14 candidates at L=4 from the paper's
+first worked-example state "425087316").
 """
 
 from collections import deque

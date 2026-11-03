@@ -1,5 +1,5 @@
-"""Quantum selector: dynamically-constructed Grover circuit over a candidate index
-register (paper Section 3.2 "Quantum stage" and Section 3.5 "The Quantum Selector").
+"""Quantum selector: dynamically constructed Grover circuit over a candidate index
+register (the "quantum stage" of the paper's Algorithm 1).
 
 The circuit uses n = ceil(log2(k)) index qubits plus one ancilla qubit prepared in
 the |-> state for phase kickback. The oracle marks every index in the marked set M
@@ -15,13 +15,25 @@ from qiskit_aer import AerSimulator
 
 
 def grover_iterations(num_states: int, num_marked: int) -> int:
-    """r = floor((pi/4) * sqrt(N / M)); a single iteration if M >= N/2."""
-    if num_marked <= 0:
+    """Number of Grover iterations r.
+
+    r = floor((pi/4) * sqrt(N / M)) when M < N/2. When M >= N/2 no iteration is
+    applied (r = 0): the uniform superposition already succeeds with probability
+    M/N >= 1/2, and a Grover iteration would not increase it (it leaves it
+    unchanged at M/N = 1/2 and lowers it for M/N > 1/2).
+    """
+    if num_marked <= 0 or 2 * num_marked >= num_states:
         return 0
-    if num_marked >= num_states / 2:
-        return 1
-    r = math.floor((math.pi / 4.0) * math.sqrt(num_states / num_marked))
-    return max(1, r)
+    return math.floor((math.pi / 4.0) * math.sqrt(num_states / num_marked))
+
+
+def success_probability(num_states: int, num_marked: int, iterations: int) -> float:
+    """Probability that measuring the index register yields a marked state after
+    `iterations` Grover iterations: sin^2((2r + 1) * theta), sin(theta) = sqrt(M/N)."""
+    if num_marked <= 0:
+        return 0.0
+    theta = math.asin(math.sqrt(num_marked / num_states))
+    return math.sin((2 * iterations + 1) * theta) ** 2
 
 
 def _apply_oracle(qc: QuantumCircuit, idx_qubits, anc_qubit: int, marked_indices, n_bits: int):
@@ -74,7 +86,11 @@ def build_circuit(num_items: int, marked_indices):
 
 
 def decode_index(bitstring: str, num_items: int) -> int:
-    """Reverse Qiskit's little-endian bitstring and interpret as a binary integer."""
+    """Reverse Qiskit's little-endian bitstring and interpret as a binary integer.
+
+    If the candidate count is not a power of two, register values >= num_items
+    are padding outcomes (never marked); they are mapped onto a valid candidate
+    by modular reduction."""
     bits = bitstring.replace(" ", "")
     idx = int(bits[::-1], 2)
     return idx % num_items if idx >= num_items else idx

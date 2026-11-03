@@ -1,11 +1,11 @@
-"""Reproduces the paper's Section 4.3-4.5 single-instance results.
+"""Single-instance run of the hybrid solver on the paper's reference instance:
+the first representative selector step, the convergence trajectory, and the
+selection-source statistics.
 
 Usage:
     python run_single_instance.py
 
-Writes ../results/single_instance.json and prints a summary matching the
-paper's "Quantum Selector: Representative Step", "Convergence", and
-"Selection Source Statistics" subsections.
+Writes ../results/single_instance.json and prints a summary.
 """
 
 import json
@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from astar import optimal_length
 from puzzle import GOAL
 from solver import solve
 
@@ -31,7 +32,9 @@ def main():
     counts = result.source_counts
     total_moves = sum(counts.values())
 
-    print(f"Initial state: {INITIAL}  (h_start = {h_start})")
+    moves = result.trace[1:]
+    print(f"Initial state: {INITIAL}  (h_start = {h_start}, "
+          f"optimal length = {optimal_length(INITIAL, GOAL)})")
     print(f"Solved: {result.solved}")
     print(f"Steps: {steps}")
     print(f"h: {h_start} -> {h_end}")
@@ -58,7 +61,12 @@ def main():
         "h_start": h_start,
         "h_end": h_end,
         "source_counts": counts,
+        "optimal_length": optimal_length(INITIAL, GOAL),
+        "selector_hits": sum(1 for s in moves if s.selector_hit),
         "trajectory_h": [s.h for s in result.trace],
+        "trajectory_source": [s.source for s in result.trace],
+        "trajectory_num_marked": [s.num_marked for s in result.trace],
+        "trajectory_num_candidates": [s.num_candidates for s in result.trace],
         "trajectory_states": [s.state for s in result.trace],
         "first_step": {
             "num_candidates": len(payload["candidates"]),
