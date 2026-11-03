@@ -1,0 +1,731 @@
+{
+  "basis_gates": [
+    "cx",
+    "rz",
+    "sx",
+    "x"
+  ],
+  "optimization_level": 1,
+  "rows": [
+    {
+      "beam_width": 16,
+      "num_marked": 1,
+      "qubits": 5,
+      "grover_iterations": 3,
+      "depth": 312,
+      "cx": 150,
+      "gates": 423
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 2,
+      "qubits": 5,
+      "grover_iterations": 2,
+      "depth": 361,
+      "cx": 172,
+      "gates": 469
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 3,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 258,
+      "cx": 122,
+      "gates": 334
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 4,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 334,
+      "cx": 158,
+      "gates": 425
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 5,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 410,
+      "cx": 194,
+      "gates": 518
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 6,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 486,
+      "cx": 230,
+      "gates": 609
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 7,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 562,
+      "cx": 266,
+      "gates": 701
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 8,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 9,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 10,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 11,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 12,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 13,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 14,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 15,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 16,
+      "num_marked": 16,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 1,
+      "qubits": 7,
+      "grover_iterations": 6,
+      "depth": 1881,
+      "cx": 996,
+      "gates": 2857
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 2,
+      "qubits": 7,
+      "grover_iterations": 4,
+      "depth": 2075,
+      "cx": 1160,
+      "gates": 3173
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 3,
+      "qubits": 7,
+      "grover_iterations": 3,
+      "depth": 2172,
+      "cx": 1242,
+      "gates": 3331
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 4,
+      "qubits": 7,
+      "grover_iterations": 3,
+      "depth": 2787,
+      "cx": 1614,
+      "gates": 4279
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 5,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 2269,
+      "cx": 1324,
+      "gates": 3491
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 6,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 2679,
+      "cx": 1572,
+      "gates": 4123
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 7,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 3089,
+      "cx": 1820,
+      "gates": 4755
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 8,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 3499,
+      "cx": 2068,
+      "gates": 5387
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 9,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 3909,
+      "cx": 2316,
+      "gates": 6023
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 10,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 2161,
+      "cx": 1282,
+      "gates": 3334
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 11,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 2366,
+      "cx": 1406,
+      "gates": 3650
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 12,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 2571,
+      "cx": 1530,
+      "gates": 3966
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 13,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 2776,
+      "cx": 1654,
+      "gates": 4283
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 14,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 2981,
+      "cx": 1778,
+      "gates": 4599
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 15,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 3186,
+      "cx": 1902,
+      "gates": 4915
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 16,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 3391,
+      "cx": 2026,
+      "gates": 5231
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 17,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 3596,
+      "cx": 2150,
+      "gates": 5550
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 18,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 3801,
+      "cx": 2274,
+      "gates": 5866
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 19,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 4006,
+      "cx": 2398,
+      "gates": 6182
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 20,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 4211,
+      "cx": 2522,
+      "gates": 6498
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 21,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 4416,
+      "cx": 2646,
+      "gates": 6815
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 22,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 4621,
+      "cx": 2770,
+      "gates": 7131
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 23,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 4826,
+      "cx": 2894,
+      "gates": 7447
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 24,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 5031,
+      "cx": 3018,
+      "gates": 7763
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 25,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 5236,
+      "cx": 3142,
+      "gates": 8081
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 26,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 5441,
+      "cx": 3266,
+      "gates": 8397
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 27,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 5646,
+      "cx": 3390,
+      "gates": 8713
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 28,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 5851,
+      "cx": 3514,
+      "gates": 9029
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 29,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 6056,
+      "cx": 3638,
+      "gates": 9346
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 30,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 6261,
+      "cx": 3762,
+      "gates": 9662
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 31,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 6466,
+      "cx": 3886,
+      "gates": 9978
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 32,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 33,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 34,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 35,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 36,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 37,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 38,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 39,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 40,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 41,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 42,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 43,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 44,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 45,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 46,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 47,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 48,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 49,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 50,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 51,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 52,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 53,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 54,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 55,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 56,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 57,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 58,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 59,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 60,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 61,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 62,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 63,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "beam_width": 64,
+      "num_marked": 64,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    }
+  ]
+}

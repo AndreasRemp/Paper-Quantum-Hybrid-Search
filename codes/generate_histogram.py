@@ -1,50 +1,69 @@
-"""Regenerates ../latex/histogram.png (paper Figure 2) from
-../results/single_instance.json. Run run_single_instance.py first.
+"""Regenerates the step-1 measurement-distribution figure (histogram.pdf/.png)
+from ../results/single_instance.json. Run run_single_instance.py first.
+
+The bars show the raw measured index-register value 0..N-1. Values at or above
+the candidate count are padding outcomes (they correspond to no candidate) and
+are drawn in light grey.
 
 Usage:
     python generate_histogram.py
 """
 
 import json
+import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+from plot_style import COLUMN_WIDTH_IN, MARKED, PADDING, UNMARKED, apply_style
 
 ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = ROOT / "figures"
+
+
+def raw_index_counts(counts: dict, num_states: int) -> list:
+    """Map Qiskit little-endian bitstrings to raw register values 0..N-1."""
+    values = [0] * num_states
+    for bitstring, c in counts.items():
+        values[int(bitstring.replace(" ", "")[::-1], 2)] += c
+    return values
+
+
+def histogram_figure(counts: dict, num_items: int, num_states: int, marked, out_stem: str):
+    apply_style()
+    values = raw_index_counts(counts, num_states)
+    marked = set(marked)
+    colors = [MARKED if i in marked else (UNMARKED if i < num_items else PADDING)
+              for i in range(num_states)]
+
+    fig, ax = plt.subplots(figsize=(COLUMN_WIDTH_IN, 2.0))
+    ax.bar(range(num_states), values, color=colors, width=0.8)
+    ax.set_xticks(range(num_states))
+    ax.set_xlabel("Measured index $j$")
+    ax.set_ylabel("Counts (1024 shots)")
+    ax.set_xlim(-0.7, num_states - 0.3)
+    handles = [Patch(color=MARKED, label="marked ($j \\in M$)"),
+               Patch(color=UNMARKED, label="unmarked candidate")]
+    if num_items < num_states:
+        handles.append(Patch(color=PADDING, label="padding ($j \\geq |C|$)"))
+    ax.legend(handles=handles, frameon=False, loc="upper right")
+
+    OUT_DIR.mkdir(exist_ok=True)
+    for ext in ("pdf", "png"):
+        path = OUT_DIR / f"{out_stem}.{ext}"
+        fig.savefig(path, dpi=300)
+        print(f"Wrote {path}")
+    plt.close(fig)
 
 
 def main():
     with open(ROOT / "results" / "single_instance.json", encoding="utf-8") as f:
-        data = json.load(f)
-
-    counts = data["first_step"]["counts"]
-    num_items = data["first_step"]["num_candidates"]
-
-    def decode(bitstring):
-        bits = bitstring.replace(" ", "")
-        idx = int(bits[::-1], 2)
-        return idx % num_items if idx >= num_items else idx
-
-    decoded = {}
-    for bitstring, c in counts.items():
-        idx = decode(bitstring)
-        decoded[idx] = decoded.get(idx, 0) + c
-
-    indices = sorted(decoded.keys())
-    values = [decoded[i] for i in indices]
-
-    plt.figure(figsize=(8, 5))
-    marked = set(data["first_step"]["marked"])
-    colors = ["#1f77b4" if i in marked else "#c7c7c7" for i in indices]
-    plt.bar([str(i) for i in indices], values, color=colors)
-    plt.xlabel("Candidate index")
-    plt.ylabel("Counts")
-    plt.title(f"Grover selector measurement, step 1, instance {data['initial']}")
-    plt.tight_layout()
-
-    out_path = ROOT / "figures" / "histogram.png"
-    plt.savefig(out_path, dpi=150)
-    print(f"Wrote {out_path}")
+        data = json.load(f)["first_step"]
+    histogram_figure(data["counts"], data["num_candidates"], data["num_states"],
+                     data["marked"], "histogram")
 
 
 if __name__ == "__main__":

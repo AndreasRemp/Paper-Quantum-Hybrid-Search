@@ -1,36 +1,27 @@
 {
-  "state": "310452786",
+  "step": 2,
+  "state": "425387016",
   "num_candidates": 16,
   "marked": [
     0,
     1,
     2,
-    3,
-    4
+    3
   ],
   "n_bits": 4,
   "num_states": 16,
   "iterations": 1,
-  "chosen_idx": 4,
-  "chosen_f": 10,
-  "chosen_h": 6,
-  "chosen_path": "LDRD",
-  "chosen_leaf": "351426780",
+  "p_marked_theory": 1.0,
+  "shots_on_marked": 1024,
+  "chosen_idx": 2,
+  "chosen_f": 14,
+  "chosen_h": 10,
+  "chosen_path": "RURD",
+  "chosen_leaf": "425376180",
   "counts": {
-    "0000": 203,
-    "1000": 197,
-    "1011": 3,
-    "0010": 209,
-    "1010": 3,
-    "0100": 181,
-    "1100": 203,
-    "0101": 7,
-    "0011": 3,
-    "0110": 1,
-    "0001": 2,
-    "1110": 4,
-    "1101": 3,
-    "0111": 3,
-    "1001": 2
+    "1100": 271,
+    "0100": 258,
+    "0000": 248,
+    "1000": 247
   }
 }

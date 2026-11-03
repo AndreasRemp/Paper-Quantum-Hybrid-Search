@@ -1,0 +1,552 @@
+{
+  "single_shot": {
+    "decision": "single_shot",
+    "tabu_window": 20,
+    "solved": 18,
+    "total": 20,
+    "mean_steps_all": 104.7,
+    "mean_steps_solved": 94.1,
+    "rows": [
+      {
+        "instance": "203861457",
+        "steps": 53,
+        "solved": true
+      },
+      {
+        "instance": "248307561",
+        "steps": 52,
+        "solved": true
+      },
+      {
+        "instance": "567034281",
+        "steps": 157,
+        "solved": true
+      },
+      {
+        "instance": "307284651",
+        "steps": 181,
+        "solved": true
+      },
+      {
+        "instance": "380721456",
+        "steps": 104,
+        "solved": true
+      },
+      {
+        "instance": "627158340",
+        "steps": 104,
+        "solved": true
+      },
+      {
+        "instance": "376215840",
+        "steps": 32,
+        "solved": true
+      },
+      {
+        "instance": "432851706",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "328764015",
+        "steps": 62,
+        "solved": true
+      },
+      {
+        "instance": "320814675",
+        "steps": 40,
+        "solved": true
+      },
+      {
+        "instance": "167308452",
+        "steps": 100,
+        "solved": true
+      },
+      {
+        "instance": "816243570",
+        "steps": 124,
+        "solved": true
+      },
+      {
+        "instance": "852307146",
+        "steps": 92,
+        "solved": true
+      },
+      {
+        "instance": "783612405",
+        "steps": 199,
+        "solved": true
+      },
+      {
+        "instance": "032167854",
+        "steps": 72,
+        "solved": true
+      },
+      {
+        "instance": "645318072",
+        "steps": 70,
+        "solved": true
+      },
+      {
+        "instance": "561423708",
+        "steps": 15,
+        "solved": true
+      },
+      {
+        "instance": "278105436",
+        "steps": 128,
+        "solved": true
+      },
+      {
+        "instance": "806275413",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "630275841",
+        "steps": 108,
+        "solved": true
+      }
+    ]
+  },
+  "classical": {
+    "decision": "classical",
+    "tabu_window": 20,
+    "solved": 15,
+    "total": 20,
+    "mean_steps_all": 116.9,
+    "mean_steps_solved": 89.2,
+    "rows": [
+      {
+        "instance": "203861457",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "248307561",
+        "steps": 60,
+        "solved": true
+      },
+      {
+        "instance": "567034281",
+        "steps": 41,
+        "solved": true
+      },
+      {
+        "instance": "307284651",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "380721456",
+        "steps": 44,
+        "solved": true
+      },
+      {
+        "instance": "627158340",
+        "steps": 72,
+        "solved": true
+      },
+      {
+        "instance": "376215840",
+        "steps": 58,
+        "solved": true
+      },
+      {
+        "instance": "432851706",
+        "steps": 149,
+        "solved": true
+      },
+      {
+        "instance": "328764015",
+        "steps": 120,
+        "solved": true
+      },
+      {
+        "instance": "320814675",
+        "steps": 40,
+        "solved": true
+      },
+      {
+        "instance": "167308452",
+        "steps": 62,
+        "solved": true
+      },
+      {
+        "instance": "816243570",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "852307146",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "783612405",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "032167854",
+        "steps": 102,
+        "solved": true
+      },
+      {
+        "instance": "645318072",
+        "steps": 50,
+        "solved": true
+      },
+      {
+        "instance": "561423708",
+        "steps": 137,
+        "solved": true
+      },
+      {
+        "instance": "278105436",
+        "steps": 54,
+        "solved": true
+      },
+      {
+        "instance": "806275413",
+        "steps": 151,
+        "solved": true
+      },
+      {
+        "instance": "630275841",
+        "steps": 198,
+        "solved": true
+      }
+    ]
+  },
+  "majority_tau20": {
+    "decision": "majority",
+    "tabu_window": 20,
+    "solved": 15,
+    "total": 20,
+    "mean_steps_all": 127.3,
+    "mean_steps_solved": 103.1,
+    "rows": [
+      {
+        "instance": "203861457",
+        "steps": 163,
+        "solved": true
+      },
+      {
+        "instance": "248307561",
+        "steps": 146,
+        "solved": true
+      },
+      {
+        "instance": "567034281",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "307284651",
+        "steps": 197,
+        "solved": true
+      },
+      {
+        "instance": "380721456",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "627158340",
+        "steps": 114,
+        "solved": true
+      },
+      {
+        "instance": "376215840",
+        "steps": 140,
+        "solved": true
+      },
+      {
+        "instance": "432851706",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "328764015",
+        "steps": 68,
+        "solved": true
+      },
+      {
+        "instance": "320814675",
+        "steps": 40,
+        "solved": true
+      },
+      {
+        "instance": "167308452",
+        "steps": 130,
+        "solved": true
+      },
+      {
+        "instance": "816243570",
+        "steps": 114,
+        "solved": true
+      },
+      {
+        "instance": "852307146",
+        "steps": 100,
+        "solved": true
+      },
+      {
+        "instance": "783612405",
+        "steps": 89,
+        "solved": true
+      },
+      {
+        "instance": "032167854",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "645318072",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "561423708",
+        "steps": 15,
+        "solved": true
+      },
+      {
+        "instance": "278105436",
+        "steps": 104,
+        "solved": true
+      },
+      {
+        "instance": "806275413",
+        "steps": 93,
+        "solved": true
+      },
+      {
+        "instance": "630275841",
+        "steps": 34,
+        "solved": true
+      }
+    ]
+  },
+  "majority_tau40": {
+    "decision": "majority",
+    "tabu_window": 40,
+    "solved": 15,
+    "total": 20,
+    "mean_steps_all": 123.0,
+    "mean_steps_solved": 97.3,
+    "rows": [
+      {
+        "instance": "203861457",
+        "steps": 81,
+        "solved": true
+      },
+      {
+        "instance": "248307561",
+        "steps": 124,
+        "solved": true
+      },
+      {
+        "instance": "567034281",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "307284651",
+        "steps": 157,
+        "solved": true
+      },
+      {
+        "instance": "380721456",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "627158340",
+        "steps": 114,
+        "solved": true
+      },
+      {
+        "instance": "376215840",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "432851706",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "328764015",
+        "steps": 68,
+        "solved": true
+      },
+      {
+        "instance": "320814675",
+        "steps": 40,
+        "solved": true
+      },
+      {
+        "instance": "167308452",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "816243570",
+        "steps": 80,
+        "solved": true
+      },
+      {
+        "instance": "852307146",
+        "steps": 100,
+        "solved": true
+      },
+      {
+        "instance": "783612405",
+        "steps": 109,
+        "solved": true
+      },
+      {
+        "instance": "032167854",
+        "steps": 186,
+        "solved": true
+      },
+      {
+        "instance": "645318072",
+        "steps": 154,
+        "solved": true
+      },
+      {
+        "instance": "561423708",
+        "steps": 15,
+        "solved": true
+      },
+      {
+        "instance": "278105436",
+        "steps": 104,
+        "solved": true
+      },
+      {
+        "instance": "806275413",
+        "steps": 93,
+        "solved": true
+      },
+      {
+        "instance": "630275841",
+        "steps": 34,
+        "solved": true
+      }
+    ]
+  },
+  "majority_tau80": {
+    "decision": "majority",
+    "tabu_window": 80,
+    "solved": 14,
+    "total": 20,
+    "mean_steps_all": 127.5,
+    "mean_steps_solved": 96.4,
+    "rows": [
+      {
+        "instance": "203861457",
+        "steps": 81,
+        "solved": true
+      },
+      {
+        "instance": "248307561",
+        "steps": 124,
+        "solved": true
+      },
+      {
+        "instance": "567034281",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "307284651",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "380721456",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "627158340",
+        "steps": 114,
+        "solved": true
+      },
+      {
+        "instance": "376215840",
+        "steps": 184,
+        "solved": true
+      },
+      {
+        "instance": "432851706",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "328764015",
+        "steps": 68,
+        "solved": true
+      },
+      {
+        "instance": "320814675",
+        "steps": 40,
+        "solved": true
+      },
+      {
+        "instance": "167308452",
+        "steps": 186,
+        "solved": true
+      },
+      {
+        "instance": "816243570",
+        "steps": 80,
+        "solved": true
+      },
+      {
+        "instance": "852307146",
+        "steps": 100,
+        "solved": true
+      },
+      {
+        "instance": "783612405",
+        "steps": 127,
+        "solved": true
+      },
+      {
+        "instance": "032167854",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "645318072",
+        "steps": 200,
+        "solved": false
+      },
+      {
+        "instance": "561423708",
+        "steps": 15,
+        "solved": true
+      },
+      {
+        "instance": "278105436",
+        "steps": 104,
+        "solved": true
+      },
+      {
+        "instance": "806275413",
+        "steps": 93,
+        "solved": true
+      },
+      {
+        "instance": "630275841",
+        "steps": 34,
+        "solved": true
+      }
+    ]
+  }
+}
