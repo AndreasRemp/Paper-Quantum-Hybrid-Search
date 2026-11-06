@@ -8,6 +8,7 @@
   "optimization_level": 1,
   "rows": [
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 1,
       "qubits": 5,
@@ -17,6 +18,7 @@
       "gates": 423
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 2,
       "qubits": 5,
@@ -26,6 +28,7 @@
       "gates": 469
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 3,
       "qubits": 5,
@@ -35,6 +38,7 @@
       "gates": 334
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 4,
       "qubits": 5,
@@ -44,6 +48,7 @@
       "gates": 425
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 5,
       "qubits": 5,
@@ -53,6 +58,7 @@
       "gates": 518
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 6,
       "qubits": 5,
@@ -62,6 +68,7 @@
       "gates": 609
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 7,
       "qubits": 5,
@@ -71,6 +78,7 @@
       "gates": 701
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 8,
       "qubits": 5,
@@ -80,6 +88,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 9,
       "qubits": 5,
@@ -89,6 +98,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 10,
       "qubits": 5,
@@ -98,6 +108,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 11,
       "qubits": 5,
@@ -107,6 +118,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 12,
       "qubits": 5,
@@ -116,6 +128,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 13,
       "qubits": 5,
@@ -125,6 +138,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 14,
       "qubits": 5,
@@ -134,6 +148,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 15,
       "qubits": 5,
@@ -143,6 +158,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 16,
       "num_marked": 16,
       "qubits": 5,
@@ -152,6 +168,7 @@
       "gates": 15
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 1,
       "qubits": 7,
@@ -161,6 +178,7 @@
       "gates": 2857
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 2,
       "qubits": 7,
@@ -170,6 +188,7 @@
       "gates": 3173
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 3,
       "qubits": 7,
@@ -179,6 +198,7 @@
       "gates": 3331
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 4,
       "qubits": 7,
@@ -188,6 +208,7 @@
       "gates": 4279
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 5,
       "qubits": 7,
@@ -197,6 +218,7 @@
       "gates": 3491
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 6,
       "qubits": 7,
@@ -206,6 +228,7 @@
       "gates": 4123
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 7,
       "qubits": 7,
@@ -215,6 +238,7 @@
       "gates": 4755
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 8,
       "qubits": 7,
@@ -224,6 +248,7 @@
       "gates": 5387
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 9,
       "qubits": 7,
@@ -233,6 +258,7 @@
       "gates": 6023
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 10,
       "qubits": 7,
@@ -242,6 +268,7 @@
       "gates": 3334
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 11,
       "qubits": 7,
@@ -251,6 +278,7 @@
       "gates": 3650
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 12,
       "qubits": 7,
@@ -260,6 +288,7 @@
       "gates": 3966
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 13,
       "qubits": 7,
@@ -269,6 +298,7 @@
       "gates": 4283
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 14,
       "qubits": 7,
@@ -278,6 +308,7 @@
       "gates": 4599
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 15,
       "qubits": 7,
@@ -287,6 +318,7 @@
       "gates": 4915
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 16,
       "qubits": 7,
@@ -296,6 +328,7 @@
       "gates": 5231
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 17,
       "qubits": 7,
@@ -305,6 +338,7 @@
       "gates": 5550
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 18,
       "qubits": 7,
@@ -314,6 +348,7 @@
       "gates": 5866
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 19,
       "qubits": 7,
@@ -323,6 +358,7 @@
       "gates": 6182
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 20,
       "qubits": 7,
@@ -332,6 +368,7 @@
       "gates": 6498
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 21,
       "qubits": 7,
@@ -341,6 +378,7 @@
       "gates": 6815
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 22,
       "qubits": 7,
@@ -350,6 +388,7 @@
       "gates": 7131
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 23,
       "qubits": 7,
@@ -359,6 +398,7 @@
       "gates": 7447
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 24,
       "qubits": 7,
@@ -368,6 +408,7 @@
       "gates": 7763
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 25,
       "qubits": 7,
@@ -377,6 +418,7 @@
       "gates": 8081
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 26,
       "qubits": 7,
@@ -386,6 +428,7 @@
       "gates": 8397
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 27,
       "qubits": 7,
@@ -395,6 +438,7 @@
       "gates": 8713
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 28,
       "qubits": 7,
@@ -404,6 +448,7 @@
       "gates": 9029
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 29,
       "qubits": 7,
@@ -413,6 +458,7 @@
       "gates": 9346
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 30,
       "qubits": 7,
@@ -422,6 +468,7 @@
       "gates": 9662
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 31,
       "qubits": 7,
@@ -431,6 +478,7 @@
       "gates": 9978
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 32,
       "qubits": 7,
@@ -440,6 +488,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 33,
       "qubits": 7,
@@ -449,6 +498,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 34,
       "qubits": 7,
@@ -458,6 +508,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 35,
       "qubits": 7,
@@ -467,6 +518,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 36,
       "qubits": 7,
@@ -476,6 +528,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 37,
       "qubits": 7,
@@ -485,6 +538,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 38,
       "qubits": 7,
@@ -494,6 +548,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 39,
       "qubits": 7,
@@ -503,6 +558,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 40,
       "qubits": 7,
@@ -512,6 +568,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 41,
       "qubits": 7,
@@ -521,6 +578,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 42,
       "qubits": 7,
@@ -530,6 +588,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 43,
       "qubits": 7,
@@ -539,6 +598,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 44,
       "qubits": 7,
@@ -548,6 +608,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 45,
       "qubits": 7,
@@ -557,6 +618,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 46,
       "qubits": 7,
@@ -566,6 +628,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 47,
       "qubits": 7,
@@ -575,6 +638,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 48,
       "qubits": 7,
@@ -584,6 +648,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 49,
       "qubits": 7,
@@ -593,6 +658,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 50,
       "qubits": 7,
@@ -602,6 +668,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 51,
       "qubits": 7,
@@ -611,6 +678,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 52,
       "qubits": 7,
@@ -620,6 +688,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 53,
       "qubits": 7,
@@ -629,6 +698,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 54,
       "qubits": 7,
@@ -638,6 +708,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 55,
       "qubits": 7,
@@ -647,6 +718,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 56,
       "qubits": 7,
@@ -656,6 +728,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 57,
       "qubits": 7,
@@ -665,6 +738,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 58,
       "qubits": 7,
@@ -674,6 +748,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 59,
       "qubits": 7,
@@ -683,6 +758,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 60,
       "qubits": 7,
@@ -692,6 +768,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 61,
       "qubits": 7,
@@ -701,6 +778,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 62,
       "qubits": 7,
@@ -710,6 +788,7 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
       "beam_width": 64,
       "num_marked": 63,
       "qubits": 7,
@@ -719,6 +798,807 @@
       "gates": 21
     },
     {
+      "oracle": "direct",
+      "beam_width": 64,
+      "num_marked": 64,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 1,
+      "qubits": 5,
+      "grover_iterations": 3,
+      "depth": 312,
+      "cx": 150,
+      "gates": 423
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 2,
+      "qubits": 5,
+      "grover_iterations": 2,
+      "depth": 115,
+      "cx": 56,
+      "gates": 157
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 3,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 133,
+      "cx": 64,
+      "gates": 181
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 4,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 44,
+      "cx": 20,
+      "gates": 69
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 5,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 120,
+      "cx": 56,
+      "gates": 165
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 6,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 69,
+      "cx": 34,
+      "gates": 100
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 7,
+      "qubits": 5,
+      "grover_iterations": 1,
+      "depth": 143,
+      "cx": 70,
+      "gates": 194
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 8,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 9,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 10,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 11,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 12,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 13,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 14,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 15,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 16,
+      "num_marked": 16,
+      "qubits": 5,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 15
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 1,
+      "qubits": 7,
+      "grover_iterations": 6,
+      "depth": 1881,
+      "cx": 996,
+      "gates": 2857
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 2,
+      "qubits": 7,
+      "grover_iterations": 4,
+      "depth": 844,
+      "cx": 336,
+      "gates": 1159
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 3,
+      "qubits": 7,
+      "grover_iterations": 3,
+      "depth": 1263,
+      "cx": 624,
+      "gates": 1819
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 4,
+      "qubits": 7,
+      "grover_iterations": 3,
+      "depth": 497,
+      "cx": 204,
+      "gates": 687
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 5,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 747,
+      "cx": 384,
+      "gates": 1099
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 6,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 538,
+      "cx": 220,
+      "gates": 739
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 7,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 957,
+      "cx": 468,
+      "gates": 1371
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 8,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 266,
+      "cx": 112,
+      "gates": 361
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 9,
+      "qubits": 7,
+      "grover_iterations": 2,
+      "depth": 681,
+      "cx": 360,
+      "gates": 1021
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 10,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 241,
+      "cx": 98,
+      "gates": 337
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 11,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 450,
+      "cx": 222,
+      "gates": 651
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 12,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 197,
+      "cx": 82,
+      "gates": 269
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 13,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 403,
+      "cx": 206,
+      "gates": 586
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 14,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 299,
+      "cx": 124,
+      "gates": 407
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 15,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 508,
+      "cx": 248,
+      "gates": 722
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 16,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 122,
+      "cx": 48,
+      "gates": 170
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 17,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 326,
+      "cx": 172,
+      "gates": 501
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 18,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 228,
+      "cx": 90,
+      "gates": 322
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 19,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 437,
+      "cx": 214,
+      "gates": 636
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 20,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 180,
+      "cx": 74,
+      "gates": 253
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 21,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 386,
+      "cx": 198,
+      "gates": 570
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 22,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 282,
+      "cx": 116,
+      "gates": 391
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 23,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 491,
+      "cx": 240,
+      "gates": 706
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 24,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 147,
+      "cx": 62,
+      "gates": 202
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 25,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 354,
+      "cx": 186,
+      "gates": 530
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 26,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 253,
+      "cx": 104,
+      "gates": 350
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 27,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 462,
+      "cx": 228,
+      "gates": 664
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 28,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 209,
+      "cx": 88,
+      "gates": 282
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 29,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 415,
+      "cx": 212,
+      "gates": 599
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 30,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 311,
+      "cx": 130,
+      "gates": 420
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 31,
+      "qubits": 7,
+      "grover_iterations": 1,
+      "depth": 520,
+      "cx": 254,
+      "gates": 735
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 32,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 33,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 34,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 35,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 36,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 37,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 38,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 39,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 40,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 41,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 42,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 43,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 44,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 45,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 46,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 47,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 48,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 49,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 50,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 51,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 52,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 53,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 54,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 55,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 56,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 57,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 58,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 59,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 60,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 61,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 62,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
+      "beam_width": 64,
+      "num_marked": 63,
+      "qubits": 7,
+      "grover_iterations": 0,
+      "depth": 3,
+      "cx": 0,
+      "gates": 21
+    },
+    {
+      "oracle": "prefix",
       "beam_width": 64,
       "num_marked": 64,
       "qubits": 7,
