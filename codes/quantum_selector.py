@@ -1,11 +1,15 @@
 """Quantum selector: dynamically constructed Grover circuit over a candidate index
 register (the "quantum stage" of the paper's Algorithm 1).
 
-The circuit uses n = ceil(log2(k)) index qubits plus one ancilla qubit prepared in
-the |-> state for phase kickback. The oracle marks every index in the marked set M
-by flipping the zero bits of its binary representation, applying a multi-controlled
-X onto the ancilla, then unflipping. The diffuser is the standard
-H -> X -> MCZ -> X -> H inversion-about-the-mean on the index register.
+The circuit uses n = ceil(log2(|C|)) index qubits plus one ancilla qubit prepared
+in the |-> state for phase kickback. Two equivalent oracles are provided. The
+direct oracle marks every index in the marked set M by flipping the zero bits of
+its binary representation, applying a multi-controlled X onto the ancilla, then
+unflipping, so its cost grows linearly with |M|. Because the candidate list is
+sorted by cost, M is always the prefix {0, ..., |M|-1}; the prefix oracle (the
+default) marks it with at most n multi-controlled gates, one per set bit of |M|.
+The diffuser is the standard H -> X -> MCZ -> X -> H inversion about the mean on
+the index register.
 """
 
 import math
@@ -48,6 +52,32 @@ def _apply_oracle(qc: QuantumCircuit, idx_qubits, anc_qubit: int, marked_indices
                 qc.x(idx_qubits[i])
 
 
+def _apply_prefix_oracle(qc: QuantumCircuit, idx_qubits, anc_qubit: int, num_marked: int, n_bits: int):
+    """Oracle for the prefix {0, ..., m-1}, m = num_marked < 2**n_bits.
+
+    The prefix is a union of one aligned block per set bit j of m: the indices
+    whose bits above position j equal those of m, whose bit j is 0, and whose
+    lower bits are free. Each block is a conjunction on the n - j leading
+    qubits, so it needs a single multi-controlled X onto the ancilla. At most
+    n_bits such gates are used, whatever the size of the marked set. Qubit q
+    holds the bit at position n_bits - 1 - q (the convention of _apply_oracle).
+    """
+    for j in range(n_bits):
+        if not (num_marked >> j) & 1:
+            continue
+        flips = []
+        for q in range(n_bits - j):
+            position = n_bits - 1 - q
+            required = 0 if position == j else (num_marked >> position) & 1
+            if required == 0:
+                flips.append(q)
+        for q in flips:
+            qc.x(idx_qubits[q])
+        qc.mcx(list(idx_qubits[: n_bits - j]), anc_qubit)
+        for q in flips:
+            qc.x(idx_qubits[q])
+
+
 def _apply_diffuser(qc: QuantumCircuit, idx_qubits):
     qc.h(idx_qubits)
     qc.x(idx_qubits)
@@ -62,12 +92,32 @@ def _apply_diffuser(qc: QuantumCircuit, idx_qubits):
     qc.h(idx_qubits)
 
 
-def build_circuit(num_items: int, marked_indices):
+def is_prefix(marked_indices) -> bool:
+    """True if the marked set is {0, ..., m-1}, which the solver always produces
+    because the candidate list is sorted by cost."""
+    return sorted(marked_indices) == list(range(len(marked_indices)))
+
+
+def build_circuit(num_items: int, marked_indices, oracle: str = "auto", iterations=None):
     """Build the Grover selector circuit for `num_items` candidates with the given
-    marked indices. Returns (circuit, n_bits, num_states, iterations)."""
+    marked indices. Returns (circuit, n_bits, num_states, iterations).
+
+    oracle: "direct" uses one multi-controlled gate per marked index; "prefix"
+    uses the block decomposition of {0, ..., m-1} (at most n_bits gates);
+    "auto" (default) uses "prefix" when the marked set is a prefix and "direct"
+    otherwise. Both implement the same unitary. `iterations` overrides the
+    iteration rule (used to compare the two oracles)."""
     n_bits = max(1, math.ceil(math.log2(max(2, num_items))))
     num_states = 2 ** n_bits
-    iterations = grover_iterations(num_states, len(marked_indices))
+    if iterations is None:
+        iterations = grover_iterations(num_states, len(marked_indices))
+    if oracle not in ("auto", "direct", "prefix"):
+        raise ValueError(f"unknown oracle {oracle!r}")
+    use_prefix = oracle == "prefix" or (oracle == "auto" and is_prefix(marked_indices))
+    if use_prefix and not is_prefix(marked_indices):
+        raise ValueError("the prefix oracle requires the marked set {0, ..., m-1}")
+    if use_prefix and len(marked_indices) >= num_states:
+        use_prefix = False  # every state marked: fall back to the direct form
 
     qc = QuantumCircuit(n_bits + 1, n_bits)
     idx_qubits = list(range(n_bits))
@@ -78,7 +128,10 @@ def build_circuit(num_items: int, marked_indices):
     qc.h(idx_qubits)
 
     for _ in range(iterations):
-        _apply_oracle(qc, idx_qubits, anc_qubit, marked_indices, n_bits)
+        if use_prefix:
+            _apply_prefix_oracle(qc, idx_qubits, anc_qubit, len(marked_indices), n_bits)
+        else:
+            _apply_oracle(qc, idx_qubits, anc_qubit, marked_indices, n_bits)
         _apply_diffuser(qc, idx_qubits)
 
     qc.measure(idx_qubits, list(range(n_bits)))

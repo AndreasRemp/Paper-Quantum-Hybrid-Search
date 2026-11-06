@@ -24,7 +24,9 @@ heuristic search.
    plus one ancilla amplifies the candidates sharing the minimum `f`. A single
    projective measurement picks one. The number of Grover iterations is
    `floor(pi/4 * sqrt(N/M))` for `M < N/2` marked states out of `N`, and zero
-   otherwise.
+   otherwise. The marked set is always the prefix `{0, ..., M-1}` of the sorted
+   candidate list, which the oracle marks with at most `n` multi-controlled
+   gates (`quantum_selector.py` also provides the direct one-gate-per-index oracle).
 3. **Move execution.** If the successor of the selected candidate is on a
    fixed-size tabu list, a classical fallback picks the best-ranked non-tabu
    candidate instead. Only the first move of the chosen path is executed.
@@ -38,7 +40,8 @@ codes/       puzzle.py            states, solvability, moves, Manhattan distance
              solver.py            the full hybrid loop (Algorithm 1)
              astar.py             reference A* (optimal solution lengths)
              run_single_instance.py, run_second_example.py, run_batch.py,
-             run_controls.py, circuit_resources.py      experiments
+             run_large_benchmark.py, run_controls.py,
+             circuit_resources.py                       experiments
              generate_*.py, plot_style.py               figures
              test_core.py         checks of the facts the paper states
 results/     JSON and log output of every experiment
@@ -53,6 +56,7 @@ cd codes
 python run_single_instance.py    # -> ../results/single_instance.json
 python run_second_example.py     # -> ../results/second_example.json
 python run_batch.py              # -> ../results/batch.json
+python run_large_benchmark.py    # -> ../results/large_benchmark.json  (200 instances, parallel)
 python run_controls.py           # -> ../results/controls.json  (slowest)
 python circuit_resources.py      # -> ../results/circuit_resources.json
 python generate_convergence.py   # -> ../figures/convergence.{pdf,png}

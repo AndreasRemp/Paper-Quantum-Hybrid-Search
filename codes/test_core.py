@@ -81,6 +81,30 @@ def test_selector_matches_theory():
     assert on_marked == 1024  # P = 1 exactly
 
 
+def test_prefix_oracle_equals_direct_oracle():
+    from qiskit.quantum_info import Statevector
+
+    def distribution(num_items, marked, oracle, iterations):
+        qc, n_bits, _, _ = build_circuit(num_items, marked, oracle=oracle, iterations=iterations)
+        qc.remove_final_measurements()
+        return Statevector(qc).probabilities(list(range(n_bits)))
+
+    for n in range(2, 6):
+        N = 2 ** n
+        for m in range(1, N):
+            marked = list(range(m))
+            direct = distribution(N, marked, "direct", 2)
+            prefix = distribution(N, marked, "prefix", 2)
+            assert max(abs(a - b) for a, b in zip(direct, prefix)) < 1e-10, (n, m)
+            # gates acting on the ancilla (the last qubit) are the oracle gates
+            qc, _, _, _ = build_circuit(N, marked, oracle="prefix", iterations=1)
+            ancilla = qc.qubits[n]
+            oracle_gates = sum(1 for inst in qc.data
+                               if inst.qubits and inst.qubits[-1] == ancilla
+                               and inst.operation.name not in ("x", "h", "measure"))
+            assert oracle_gates == bin(m).count("1") <= n, (n, m, oracle_gates)
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in tests:
