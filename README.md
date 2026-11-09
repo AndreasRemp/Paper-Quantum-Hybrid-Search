@@ -44,9 +44,11 @@ codes/       puzzle.py            states, solvability, moves, Manhattan distance
              circuit_resources.py                       experiments
              generate_*.py, plot_style.py               figures
              test_core.py         checks of the facts the paper states
-results/     JSON and log output of every experiment
-figures/     figures generated from results/ (PDF and PNG)
+results/     JSON output of every experiment
 ```
+
+Figures are not stored here. The `generate_*.py` scripts rebuild them from
+`results/` into a local `figures/` folder.
 
 ## Reproducing the results
 
