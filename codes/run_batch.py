@@ -65,11 +65,11 @@ def main():
 
     solved_rows = [r for r in rows if r["solved"]]
     mean_h = statistics.mean(r["h_start"] for r in rows)
-    std_h = statistics.pstdev(r["h_start"] for r in rows)
+    std_h = statistics.stdev(r["h_start"] for r in rows)
     mean_steps = statistics.mean(r["steps"] for r in rows)
-    std_steps = statistics.pstdev(r["steps"] for r in rows)
+    std_steps = statistics.stdev(r["steps"] for r in rows)
     mean_q = statistics.mean(r["quantum_pct"] for r in rows)
-    std_q = statistics.pstdev(r["quantum_pct"] for r in rows)
+    std_q = statistics.stdev(r["quantum_pct"] for r in rows)
     draws = sum(r["selector_draws"] for r in rows)
     hits = sum(r["selector_hits"] for r in rows)
     p_sum = sum(r["p_marked_sum"] for r in rows)
