@@ -1,8 +1,9 @@
-"""Regenerates the convergence figure (convergence.pdf/.png) from
-../results/single_instance.json. Run run_single_instance.py first.
+"""Regenerates the convergence figure from ../results/single_instance.json.
+Run run_single_instance.py first.
 
 Usage:
-    python generate_convergence.py
+    python generate_convergence.py              # figures/convergence.{pdf,png}
+    python generate_convergence.py --springer   # figures/springer/Fig4.{pdf,eps}
 """
 
 import json
@@ -13,21 +14,21 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import matplotlib.pyplot as plt
 
-from plot_style import COLUMN_WIDTH_IN, MARKED, apply_style
+from plot_style import MARKED, apply_style, variant_from_argv, width_in
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT_DIR = ROOT / "figures"
 
 
 def main():
-    apply_style()
+    variant = variant_from_argv()
+    apply_style(variant)
     with open(ROOT / "results" / "single_instance.json", encoding="utf-8") as f:
         data = json.load(f)
 
     h_values = data["trajectory_h"]
     steps = list(range(len(h_values)))
 
-    fig, ax = plt.subplots(figsize=(COLUMN_WIDTH_IN, 2.1))
+    fig, ax = plt.subplots(figsize=(width_in(variant), 2.1 if variant == "ieee" else 2.7))
     ax.plot(steps, h_values, color=MARKED, linewidth=1.0, marker="o", markersize=2.2)
     ax.set_xlabel("Step $t$")
     ax.set_ylabel("Manhattan distance $h(s_t)$")
@@ -35,9 +36,13 @@ def main():
     ax.set_ylim(bottom=0)
     ax.grid(True, linewidth=0.3, alpha=0.5)
 
-    OUT_DIR.mkdir(exist_ok=True)
-    for ext in ("pdf", "png"):
-        path = OUT_DIR / f"convergence.{ext}"
+    if variant == "springer":
+        out_dir, stem, exts = ROOT / "figures" / "springer", "Fig4", ("pdf", "eps")
+    else:
+        out_dir, stem, exts = ROOT / "figures", "convergence", ("pdf", "png")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for ext in exts:
+        path = out_dir / f"{stem}.{ext}"
         fig.savefig(path, dpi=300)
         print(f"Wrote {path}")
     plt.close(fig)

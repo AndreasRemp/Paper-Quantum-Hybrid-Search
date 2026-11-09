@@ -62,6 +62,8 @@ python circuit_resources.py      # -> ../results/circuit_resources.json
 python generate_convergence.py   # -> ../figures/convergence.{pdf,png}
 python generate_histogram.py     # -> ../figures/histogram.{pdf,png}
 python generate_histogram2.py    # -> ../figures/histogram2.{pdf,png}
+python generate_flowchart.py     # -> ../figures/springer/Fig1.{pdf,eps}
+# add --springer to the other generate_* scripts for the sans-serif, EPS journal figure set
 ```
 
 All randomness is seeded (`seed_sim`, `seed_transpile`), so re-running produces
