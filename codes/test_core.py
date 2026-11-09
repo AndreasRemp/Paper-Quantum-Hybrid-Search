@@ -105,6 +105,27 @@ def test_prefix_oracle_equals_direct_oracle():
             assert oracle_gates == bin(m).count("1") <= n, (n, m, oracle_gates)
 
 
+def test_effective_hit_probability_matches_exact_circuit():
+    from qiskit.quantum_info import Statevector
+    from quantum_selector import effective_hit_probability
+
+    for num_items in (3, 5, 6, 9, 11, 13, 14, 15, 16):
+        for m in range(1, num_items + 1):
+            marked = list(range(m))
+            qc, n_bits, _, _ = build_circuit(num_items, marked)
+            qc.remove_final_measurements()
+            probs = Statevector(qc).probabilities(list(range(n_bits)))
+            # decode register value j like decode_index: reverse bits, then reduce mod num_items
+            exact = 0.0
+            for value, p in enumerate(probs):
+                bits = format(value, f"0{n_bits}b")  # qubit 0 is the lowest bit of `value`
+                j = int(bits[::-1], 2)               # reversed, as decode_index does
+                idx = j % num_items if j >= num_items else j
+                if idx in marked:
+                    exact += p
+            assert abs(exact - effective_hit_probability(num_items, m)) < 1e-9, (num_items, m)
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in tests:

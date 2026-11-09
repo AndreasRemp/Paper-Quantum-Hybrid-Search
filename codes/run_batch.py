@@ -48,6 +48,7 @@ def summarize_run(instance, result, seed_sim):
         "selector_hits": sum(1 for s in moves if s.selector_hit),
         "selector_draws": len(moves),
         "p_marked_sum": round(sum(s.p_marked for s in moves), 6),
+        "p_hit_sum": round(sum(s.p_hit for s in moves), 6),
     }
 
 
@@ -72,6 +73,7 @@ def main():
     draws = sum(r["selector_draws"] for r in rows)
     hits = sum(r["selector_hits"] for r in rows)
     p_sum = sum(r["p_marked_sum"] for r in rows)
+    p_hit_sum = sum(r["p_hit_sum"] for r in rows)
 
     print(f"\nSolved: {len(solved_rows)}/{len(rows)}")
     print(f"Mean h_start: {mean_h:.1f}  (std {std_h:.1f})")
@@ -94,6 +96,7 @@ def main():
             "std_quantum_pct": round(std_q, 1),
             "selector_hit_pct": round(100 * hits / draws, 1),
             "selector_theory_pct": round(100 * p_sum / draws, 1),
+            "selector_expected_pct": round(100 * p_hit_sum / draws, 1),
             "mean_optimal_length": round(statistics.mean(r["optimal_length"] for r in rows), 1),
             "mean_steps_solved": round(statistics.mean(r["steps"] for r in solved_rows), 1),
         },

@@ -40,6 +40,24 @@ def success_probability(num_states: int, num_marked: int, iterations: int) -> fl
     return math.sin((2 * iterations + 1) * theta) ** 2
 
 
+def effective_hit_probability(num_items: int, num_marked: int) -> float:
+    """Probability that the decoded index is a marked candidate, for the marked
+    set {0, ..., num_marked - 1}.
+
+    Grover iterations keep the state in the span of the uniform marked and the
+    uniform unmarked states, so every unmarked register value, padding values
+    included, has the same probability q = (1 - P) / (N - M). Padding values
+    j >= num_items are decoded as j mod num_items = j - num_items, so
+    min(M, N - num_items) of them land on a marked candidate."""
+    n_bits = max(1, math.ceil(math.log2(max(2, num_items))))
+    num_states = 2 ** n_bits
+    if num_marked >= num_states:
+        return 1.0
+    p = success_probability(num_states, num_marked, grover_iterations(num_states, num_marked))
+    q = (1.0 - p) / (num_states - num_marked)
+    return p + q * min(num_marked, num_states - num_items)
+
+
 def _apply_oracle(qc: QuantumCircuit, idx_qubits, anc_qubit: int, marked_indices, n_bits: int):
     for idx in marked_indices:
         bits = format(idx, f"0{n_bits}b")

@@ -25,7 +25,8 @@
       },
       "selector_hits": 45,
       "selector_draws": 53,
-      "p_marked_sum": 46.674927
+      "p_marked_sum": 46.674927,
+      "p_hit_sum": 47.825867
     },
     {
       "instance": "248307561",
@@ -43,7 +44,8 @@
       },
       "selector_hits": 49,
       "selector_draws": 52,
-      "p_marked_sum": 49.276688
+      "p_marked_sum": 49.276688,
+      "p_hit_sum": 49.43779
     },
     {
       "instance": "567034281",
@@ -61,7 +63,8 @@
       },
       "selector_hits": 149,
       "selector_draws": 157,
-      "p_marked_sum": 144.592529
+      "p_marked_sum": 144.592529,
+      "p_hit_sum": 145.560593
     },
     {
       "instance": "307284651",
@@ -79,7 +82,8 @@
       },
       "selector_hits": 175,
       "selector_draws": 181,
-      "p_marked_sum": 171.46315
+      "p_marked_sum": 171.46315,
+      "p_hit_sum": 172.15535
     },
     {
       "instance": "380721456",
@@ -97,7 +101,8 @@
       },
       "selector_hits": 94,
       "selector_draws": 104,
-      "p_marked_sum": 95.1091
+      "p_marked_sum": 95.1091,
+      "p_hit_sum": 95.772934
     },
     {
       "instance": "627158340",
@@ -115,7 +120,8 @@
       },
       "selector_hits": 89,
       "selector_draws": 104,
-      "p_marked_sum": 95.20752
+      "p_marked_sum": 95.20752,
+      "p_hit_sum": 95.748703
     },
     {
       "instance": "376215840",
@@ -133,7 +139,8 @@
       },
       "selector_hits": 27,
       "selector_draws": 32,
-      "p_marked_sum": 30.32489
+      "p_marked_sum": 30.32489,
+      "p_hit_sum": 30.384583
     },
     {
       "instance": "432851706",
@@ -151,7 +158,8 @@
       },
       "selector_hits": 190,
       "selector_draws": 200,
-      "p_marked_sum": 187.996017
+      "p_marked_sum": 187.996017,
+      "p_hit_sum": 188.63353
     },
     {
       "instance": "328764015",
@@ -169,7 +177,8 @@
       },
       "selector_hits": 57,
       "selector_draws": 62,
-      "p_marked_sum": 55.263916
+      "p_marked_sum": 55.263916,
+      "p_hit_sum": 56.339233
     },
     {
       "instance": "320814675",
@@ -187,7 +196,8 @@
       },
       "selector_hits": 40,
       "selector_draws": 40,
-      "p_marked_sum": 38.04126
+      "p_marked_sum": 38.04126,
+      "p_hit_sum": 38.257202
     },
     {
       "instance": "167308452",
@@ -205,7 +215,8 @@
       },
       "selector_hits": 92,
       "selector_draws": 100,
-      "p_marked_sum": 91.282501
+      "p_marked_sum": 91.282501,
+      "p_hit_sum": 91.540009
     },
     {
       "instance": "816243570",
@@ -223,7 +234,8 @@
       },
       "selector_hits": 117,
       "selector_draws": 124,
-      "p_marked_sum": 113.664459
+      "p_marked_sum": 113.664459,
+      "p_hit_sum": 114.335953
     },
     {
       "instance": "852307146",
@@ -241,7 +253,8 @@
       },
       "selector_hits": 86,
       "selector_draws": 92,
-      "p_marked_sum": 85.491913
+      "p_marked_sum": 85.491913,
+      "p_hit_sum": 85.848404
     },
     {
       "instance": "783612405",
@@ -259,7 +272,8 @@
       },
       "selector_hits": 189,
       "selector_draws": 199,
-      "p_marked_sum": 186.182281
+      "p_marked_sum": 186.182281,
+      "p_hit_sum": 186.939636
     },
     {
       "instance": "032167854",
@@ -277,7 +291,8 @@
       },
       "selector_hits": 69,
       "selector_draws": 72,
-      "p_marked_sum": 68.124435
+      "p_marked_sum": 68.124435,
+      "p_hit_sum": 68.512329
     },
     {
       "instance": "645318072",
@@ -295,7 +310,8 @@
       },
       "selector_hits": 69,
       "selector_draws": 70,
-      "p_marked_sum": 66.054794
+      "p_marked_sum": 66.054794,
+      "p_hit_sum": 66.437302
     },
     {
       "instance": "561423708",
@@ -313,7 +329,8 @@
       },
       "selector_hits": 15,
       "selector_draws": 15,
-      "p_marked_sum": 14.292877
+      "p_marked_sum": 14.292877,
+      "p_hit_sum": 14.321396
     },
     {
       "instance": "278105436",
@@ -331,7 +348,8 @@
       },
       "selector_hits": 117,
       "selector_draws": 128,
-      "p_marked_sum": 117.907974
+      "p_marked_sum": 117.907974,
+      "p_hit_sum": 118.636963
     },
     {
       "instance": "806275413",
@@ -349,7 +367,8 @@
       },
       "selector_hits": 175,
       "selector_draws": 200,
-      "p_marked_sum": 182.575287
+      "p_marked_sum": 182.575287,
+      "p_hit_sum": 183.496552
     },
     {
       "instance": "630275841",
@@ -367,7 +386,8 @@
       },
       "selector_hits": 106,
       "selector_draws": 108,
-      "p_marked_sum": 100.53479
+      "p_marked_sum": 100.53479,
+      "p_hit_sum": 100.971832
     }
   ],
   "summary": {
@@ -381,6 +401,7 @@
     "std_quantum_pct": 10.5,
     "selector_hit_pct": 93.2,
     "selector_theory_pct": 92.7,
+    "selector_expected_pct": 93.2,
     "mean_optimal_length": 22.6,
     "mean_steps_solved": 94.1
   }

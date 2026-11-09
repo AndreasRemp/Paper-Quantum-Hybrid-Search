@@ -66,6 +66,7 @@ def run_one(args):
             "selector_hits": sum(1 for s in moves if s.selector_hit),
             "selector_draws": len(moves),
             "p_marked_sum": round(sum(s.p_marked for s in moves), 6),
+            "p_hit_sum": round(sum(s.p_hit for s in moves), 6),
             "fallback": r.source_counts["fallback"],
             "forced": r.source_counts["forced"],
         }
@@ -105,6 +106,7 @@ def summarize(rows, name):
             sum(r[name]["steps"] for r in sol) / sum(r["optimal_length"] for r in sol), 2),
         "selector_hit_pct": round(100 * sum(r[name]["selector_hits"] for r in rows) / draws, 1),
         "selector_theory_pct": round(100 * sum(r[name]["p_marked_sum"] for r in rows) / draws, 1),
+        "selector_expected_pct": round(100 * sum(r[name]["p_hit_sum"] for r in rows) / draws, 1),
     }
 
 
@@ -115,6 +117,18 @@ def sign_test_p(positive, negative):
         return 1.0
     tail = sum(math.comb(n, k) for k in range(0, min(positive, negative) + 1)) / 2 ** n
     return min(1.0, 2 * tail)
+
+
+def paired_solve_difference(rows):
+    """Difference in solve rate (Grover minus classical) with a Wald 95% interval for
+    paired proportions, from the discordant counts b and c."""
+    n = len(rows)
+    b = sum(1 for r in rows if r["quantum"]["solved"] and not r["classical"]["solved"])
+    c = sum(1 for r in rows if r["classical"]["solved"] and not r["quantum"]["solved"])
+    diff = (b - c) / n
+    se = math.sqrt(b + c - (b - c) ** 2 / n) / n
+    return {"difference_pp": round(100 * diff, 1),
+            "wald95_pp": [round(100 * (diff - 1.959964 * se), 1), round(100 * (diff + 1.959964 * se), 1)]}
 
 
 def paired_steps(rows):
@@ -166,6 +180,7 @@ def main():
         "only_quantum_solved": b,
         "only_classical_solved": cc,
         "mcnemar_exact_p": round(mcnemar_exact(b, cc), 4),
+        "paired_solve_difference": paired_solve_difference(rows),
         "paired_steps": paired_steps(rows),
     }
     print(json.dumps(summary, indent=2))

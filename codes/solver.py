@@ -30,8 +30,8 @@ from dataclasses import dataclass, field
 
 from lookahead import lookahead_candidates
 from puzzle import GOAL, is_solvable, manhattan_distance, neighbors
-from quantum_selector import (grover_select, ranked_indices_from_counts,
-                              success_probability)
+from quantum_selector import (effective_hit_probability, grover_select,
+                              ranked_indices_from_counts, success_probability)
 
 DECISIONS = ("single_shot", "majority", "classical")
 
@@ -50,7 +50,9 @@ class StepRecord:
     num_candidates: int | None = None
     num_marked: int | None = None
     selector_hit: bool | None = None   # selector's draw was a minimum-cost candidate
-    p_marked: float | None = None      # theoretical probability of a marked outcome
+    p_marked: float | None = None      # theoretical probability of a marked register value
+    p_hit: float | None = None         # theoretical probability that the decoded index is marked
+                                       # (adds padding values decoded onto marked candidates)
 
 
 @dataclass
@@ -92,7 +94,7 @@ def solve(initial: str, goal: str = GOAL, lookahead: int = 4, beam_k: int = 16,
 
         if decision == "classical":
             quantum_choice = random.Random(step_seed).choice(marked)
-            n_bits, num_states, iters, p_marked = None, None, None, 1.0
+            n_bits, num_states, iters, p_marked, p_hit = None, None, None, 1.0, 1.0
         else:
             shots = 1 if decision == "single_shot" else diagnostic_shots
             decision_counts, n_bits, num_states, iters = grover_select(
@@ -101,6 +103,7 @@ def solve(initial: str, goal: str = GOAL, lookahead: int = 4, beam_k: int = 16,
             )
             quantum_choice = ranked_indices_from_counts(decision_counts, len(candidates))[0]
             p_marked = success_probability(num_states, len(marked), iters)
+            p_hit = effective_hit_probability(len(candidates), len(marked))
         quantum_successor = _first_move_successor(state, candidates[quantum_choice].path)
 
         if quantum_successor not in tabu_set:
@@ -145,7 +148,7 @@ def solve(initial: str, goal: str = GOAL, lookahead: int = 4, beam_k: int = 16,
         trace.append(StepRecord(
             step=t, state=state, h=manhattan_distance(state, goal), source=source,
             num_candidates=len(candidates), num_marked=len(marked),
-            selector_hit=quantum_choice in marked, p_marked=p_marked,
+            selector_hit=quantum_choice in marked, p_marked=p_marked, p_hit=p_hit,
         ))
 
     return SolveResult(
