@@ -15,7 +15,7 @@ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Polygon
 from plot_style import apply_style, width_in
 
 ROOT = Path(__file__).resolve().parent.parent
-FS = 7.5  # node text size in points at the final 119 mm width
+FS = 8  # node text size in points at the final 119 mm width
 
 
 def box(ax, cx, cy, w, h, text):
@@ -37,7 +37,7 @@ def arrow(ax, pts, label=None, label_xy=None, label_ha="center"):
     ax.add_patch(FancyArrowPatch(pts[-2], pts[-1], arrowstyle="-|>", mutation_scale=7,
                                  color="black", lw=0.9, shrinkA=0, shrinkB=0))
     if label:
-        ax.text(*label_xy, label, fontsize=7, ha=label_ha, va="center")
+        ax.text(*label_xy, label, fontsize=FS, ha=label_ha, va="center")
 
 
 def main():
